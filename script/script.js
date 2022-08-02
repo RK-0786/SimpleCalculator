@@ -3,14 +3,13 @@ function addValue() {
     var a = document.getElementById('input_a').value;
     var b = document.getElementById('input_b').value;
 
-    // parse to integer. You can use: parseInt(input, 10);
-    var float_a = parseFloat(a);
-    var float_b = parseFloat(b);
-
-    if (isNaN(float_a) || isNaN(float_b)) {
+    if (isNaN(a) || isNaN(b)) {
         console.log('Enter real numbers only');
         document.mycalculator.output.value = "Enter real numbers only";
     } else {
+         // parse to integer. You can use: parseInt(input, 10);
+        var float_a = parseFloat(a);
+        var float_b = parseFloat(b);
         // perform operation
         var sum = float_a + float_b;
 
@@ -31,15 +30,15 @@ function mulValue() {
     var a = document.getElementById('input_a').value;
     var b = document.getElementById('input_b').value;
 
-    // parse to integer. You can use: parseInt(input, 10);
-    var float_a = parseFloat(a);
-    var float_b = parseFloat(b);
-
-
-    if (isNaN(float_a) || isNaN(float_b)) {
+    if(isNaN(a)||isNaN(b))
+    {
         console.log('Enter real numbers only');
         document.mycalculator.output.value = "Enter real numbers only";
-    } else {
+    }
+    else {
+         // parse to integer. You can use: parseInt(input, 10);
+        var float_a = parseFloat(a);
+        var float_b = parseFloat(b);
         // perform operation
         var mul = float_a * float_b;
 
@@ -56,18 +55,19 @@ function divValue() {
     var a = document.getElementById('input_a').value;
     var b = document.getElementById('input_b').value;
 
-    // parse to integer. You can use: parseInt(input, 10);
-    var float_a = parseFloat(a);
-    var float_b = parseFloat(b);
-
-    if (isNaN(float_a) || isNaN(float_b)) {
+    if (isNaN(a) || isNaN(b)) {
         console.log('Enter real numbers only');
         document.mycalculator.output.value = "Enter real numbers only";
-    } else if (float_b == 0) {
+    } else if (b == 0) {
         console.log('Denominator Cannot be Zero !!');
         document.mycalculator.output.value = "Denominator Cannot be Zero !!";
 
     } else {
+        
+        // parse to integer. You can use: parseInt(input, 10);
+        var float_a = parseFloat(a);
+         var float_b = parseFloat(b);
+
         // perform operation
         var div = float_a / float_b;
 
